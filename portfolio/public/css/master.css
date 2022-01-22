@@ -1,1 +1,569 @@
+/*
+* ==========================================================
+*     GENERAL
+* ==========================================================
+*/
+:root {
+    --bs-font-sans-serif: "Roboto", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
+}
+
+.btn-primary {
+    color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #fff !important;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+}
+
+.card-collapse-link {
+    position: relative;
+    padding-right: 20px;
+}
+
+
+
+.card-collapse-link[data-bs-toggle="collapse"][aria-expanded="true"]::before {
+    -webkit-transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+
+
+p {
+    font-size: 0.9rem;
+}
+
+a {
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+i {
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+}
+
+.btn-xs {
+    padding: 2px 5px !important;
+    border-radius: 2px !important;
+    font-size: 0.7em !important;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 200px);
+    min-height: 100vh;
+    padding-bottom: 3rem;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+    background-color: #f4f7fa;
+}
+
+.page.active {
+    width: calc(100% - 70px);
+}
+
+@media (max-width: 1199.98px) {
+    .page {
+        width: 100%;
+    }
+
+    .page.active {
+        width: 100%;
+    }
+
+    .page.active-sm {
+        width: calc(100% - 70px);
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container-fluid,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
+        padding: 0 3rem;
+    }
+}
+
+
+/*
+   Text utils
+   ------------------------
+*/
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+}
+
+.text-sm {
+    font-size: 0.85rem;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.text-lg {
+    font-size: 1.5rem;
+}
+
+.text-xl {
+    font-size: 1.75rem;
+}
+
+.text-xxl {
+    font-size: 2rem;
+}
+
+.text-xs {
+    font-size: 0.8rem !important;
+}
+
+.text-sm {
+    font-size: 0.9rem !important;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-primary {
+    text-shadow: 2px 2px 2px rgba(51, 179, 90, 0.1);
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.text-inherit {
+    color: inherit;
+}
+
+/*
+* ==========================================================
+*     SIDE NAVBAR
+* ==========================================================
+*/
+.side-navbar .sidebar-header {
+    background: #292929;
+}
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 200px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: left;
+    color: #fff;
+    background: #202020;
+    z-index: 999;
+    transition: all 0.3s;
+    overflow: hidden;
+    /*  Side navbar small ------------------------ */
+}
+
+.side-navbar .scrolled-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.side-navbar.hide {
+    left: -70px;
+}
+
+@media (max-width: 1199.98px) {
+    .side-navbar {
+        left: -70px;
+        width: 70px;
+        text-align: center;
+    }
+
+    .side-navbar.show-sm {
+        left: 0 !important;
+    }
+
+    .side-navbar .brand-small {
+        display: block;
+    }
+
+    .side-navbar .sidenav-header-inner {
+        display: none;
+    }
+}
+
+.side-navbar .brand-small {
+    display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .side-navbar .brand-small {
+        display: block;
+    }
+}
+
+.side-navbar.shrink {
+    width: 70px;
+    text-align: center;
+}
+
+.side-navbar.shrink .brand-small {
+    display: block;
+}
+
+.side-navbar.shrink .sidenav-header-inner {
+    display: none;
+}
+
+
+
+.sidebar-item li a {
+    background: #292929;
+}
+
+/*
+* ==========================================================
+*     Main NAVBAR
+* ==========================================================
+*/
+nav.navbar {
+    padding: 0.8rem 0;
+    background: #202020;
+}
+
+nav.navbar .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav.navbar .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    -webkit-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+    opacity: 0;
+}
+
+nav.navbar .dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+    nav.navbar .dropdown {
+        position: static;
+    }
+
+    nav.navbar .dropdown-menu {
+        right: 2.5vw;
+        left: 2.5vw;
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .sidebar-item li a {
+        padding-left: 2.5rem;
+    }
+}
+
+.dropdown-text {
+    text-align: center;
+}
+
+.sidebar-item.active>.sidebar-drop-link {
+    color: #fff;
+    background: #33b35a;
+}
+
+.sidebar-item.active>.sidebar-drop-link:hover {
+    background: #33b35a;
+}
+
+.sidebar-item li.active>a.sidebar-drop-link {
+    color: #fff;
+    background: #4dcc74;
+}
+
+.sidebar-item .collapse,
+.sidebar-item .collapsing {
+    border-left: 2px solid #33b35a;
+    background: #ffffff;
+}
+
+.sidebar-item .collapse li:not(.active) .sidebar-drop-link:hover,
+.sidebar-item .collapse li:not(.active) .sidebar-drop-link:focus,
+.sidebar-item .collapsing li:not(.active) .sidebar-drop-link:hover,
+.sidebar-item .collapsing li:not(.active) .sidebar-drop-link:focus {
+    background: #121212;
+}
+
+.sidebar-item-name {
+    padding-bottom: 10px;
+}
+
+.sidebar-drop-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    color: inherit;
+    font-size: 0.9rem;
+    font-weight: 300;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 1199.98px) {
+    .sidebar-drop-link {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 15px 2px;
+        font-size: 0.7rem;
+    }
+}
+
+.sidebar-drop-link:hover {
+    color: #fff;
+    background: #33b35a;
+}
+
+.sidebar-drop-link[data-bs-toggle="collapse"]::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EAngle Left%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer1' fill='none' stroke='white' stroke-miterlimit='10' stroke-width='5' d='M39 20.006L25 32l14 12.006' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E");
+    background-position: right center;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+
+@media (max-width: 1199.98px) {
+    .sidebar-drop-link[data-bs-toggle="collapse"]::before {
+        -webkit-transform: translateX(50%) rotate(-90deg);
+        transform: translateX(50%) rotate(-90deg);
+        position: absolute;
+        top: auto;
+        right: 50%;
+        bottom: 0;
+        left: auto;
+    }
+}
+
+.sidebar-drop-link[aria-expanded="true"],
+.sidebar-drop-link[aria-expanded="aria-expanded"] {
+    background: #33b35a;
+}
+
+.sidebar-drop-link[aria-expanded="true"]::before,
+.sidebar-drop-link[aria-expanded="aria-expanded"]::before {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(90deg);
+}
+
+@media (max-width: 1199.98px) {
+
+    .sidebar-drop-link[aria-expanded="true"]::before,
+    .sidebar-drop-link[aria-expanded="aria-expanded"]::before {
+        -webkit-transform: translateX(50%) rotate(90deg);
+        transform: translateX(50%) rotate(90deg);
+    }
+}
+
+.sidebar-drop-link[aria-expanded="true"]:hover,
+.sidebar-drop-link[aria-expanded="aria-expanded"]:hover {
+    color: #fff;
+    background: #33b35a;
+}
+
+
+.side-navbar.shrink .sidebar-item a.sidebar-drop-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 15px 2px;
+    font-size: 0.7rem;
+}
+
+.side-navbar.shrink .sidebar-item a.sidebar-drop-link[data-bs-toggle="collapse"]::before {
+    -webkit-transform: translateX(50%) rotate(-90deg);
+    transform: translateX(50%) rotate(-90deg);
+    position: absolute;
+    top: auto;
+    right: 50%;
+    bottom: 0;
+    left: auto;
+}
+
+.side-navbar.shrink .sidebar-item a.sidebar-drop-link[data-bs-toggle="collapse"][aria-expanded="true"]::before,
+.side-navbar.shrink .sidebar-item a.sidebar-drop-link[data-bs-toggle="collapse"][aria-expanded="aria-expanded"]::before {
+    -webkit-transform: translateX(50%) rotate(90deg);
+    transform: translateX(50%) rotate(90deg);
+}
+
+.side-navbar.shrink .sidebar-item a.sidebar-drop-link svg {
+    margin-right: 0 !important;
+    margin-bottom: 4px;
+}
+
+.side-navbar.shrink .sidebar-drop-link .badge {
+    margin-left: 0;
+}
+
+/*
+* ===================================================
+*    Custom Orion Icons
+* ===================================================
+*/
+
+.svg-icon-big {
+    width: 56px;
+    height: 56px;
+}
+
+.svg-icon-sm {
+    width: 20px;
+    height: 20px;
+}
+
+.svg-icon-xs {
+    width: 18px;
+    height: 18px;
+}
+
+/*
+* ===================================================
+*    Custom Orion Icons
+* ===================================================
+*/
+
+.svg-icon-big {
+    width: 56px;
+    height: 56px;
+}
+
+.svg-icon-sm {
+    width: 20px;
+    height: 20px;
+}
+
+.svg-icon-xs {
+    width: 18px;
+    height: 18px;
+}
+
+/*
+     Letter spacing helpers - .letter-spacing-[0-5]
+    ------------------------
+*/
+.letter-spacing-0 {
+    letter-spacing: 0 !important;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.1em;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.2em;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 0.3em;
+}
+
+.letter-spacing-4 {
+    letter-spacing: 0.4em;
+}
+
+.letter-spacing-5 {
+    letter-spacing: 0.5em;
+}
+
+/*
+     Colours and backgrounds
+    ------------------------
+*/
+.bg-gray-900 {
+    background: #212529 !important;
+}
+
+.text-gray-500 {
+    color: rgb(212, 212, 212);
+}
+
+/*
+    Avatars
+   ------------------------
+*/
+.avatar {
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border: #000000;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    line-height: 3rem;
+}
+
+.my-name {
+    font-size: 16px;
+    font-weight: bold;
+}

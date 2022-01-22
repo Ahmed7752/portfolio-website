@@ -4,25 +4,70 @@
         <!-- My Info-->
         <div class="sidenav-header-inner text-center">
             <img class="img-fluid rounded-circle avatar mb-3" src="./img/profile-pic.jpg" alt="person">
-            <h2 class="h5 text-white text-uppercase mb-0">Ahmed Mohamed</h2>
+            <h2 class="h5 my-name text-white text-uppercase mb-0">Ahmed Mohamed</h2>
             <p class="text-sm mb-0 text-muted">Web Developer</p>
         </div>
         <a class="brand-small text-center" href="index.html">
             <p class="h1 m-0">AM</p>
         </a>
     </div>
-    <span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
+    <span class="text-uppercase text-gray-500 text-sm fw-bold  mx-lg-2 heading">
+        Main</span>
 
     <ul class="list-unstyled">
-
-        <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse">
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                    <use xlink:href="#browser-window-1"> </use>
-                </svg>Example dropdown </a>
-            <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-                <li><a class="sidebar-link" href="#"><i class="fas fa-user"></i>Page</a></li>
-                <li><a class="sidebar-link" href="#"><i class="fas fa-user"></i>Page</a></li>
-                <li><a class="sidebar-link" href="#"><i class="fas fa-user"></i>Page</a></li>
+        <li class="sidebar-item sidebar-item-name">
+            <a class="sidebar-drop-link" href="#">
+                <i class="fal fa-home fa-lg p-2"></i>
+                <div class="text-uppercase">
+                    Home
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-item sidebar-item-name">
+            <a class="sidebar-drop-link" href="#">
+                <i class="fal fa-address-card fa-lg p-2"></i>
+                <div class="text-uppercase">
+                    About
+                </div>
+            </a>
+        </li>
+        <li class="sidebar-item sidebar-item-name">
+            <a class="sidebar-drop-link" href="#dropMenu" data-bs-toggle="collapse">
+                <i class="fal fa-browser fa-lg p-2"></i>
+                <div class="text-uppercase">
+                    My Websites
+                </div>
+            </a>
+            <ul class="collapse list-unstyled " id="dropMenu">
+                <li><a class="sidebar-drop-link" href="#">website one</a></li>
+                <li><a class="sidebar-drop-link" href="#">Website two</a></li>
+                <li><a class="sidebar-drop-link" href="#">Website three</a></li>
+            </ul>
+        </li>
+        <li class="sidebar-item sidebar-item-name">
+            <a class="sidebar-drop-link" href="#dropMenu2" data-bs-toggle="collapse">
+                <i class="fal fa-dice-three fa-lg p-2"></i>
+                <div class="text-uppercase">
+                    My Games
+                </div>
+            </a>
+            <ul class="collapse list-unstyled " id="dropMenu2">
+                <li><a class="sidebar-drop-link" href="#">Game one</a></li>
+                <li><a class="sidebar-drop-link" href="#">Game two</a></li>
+                <li><a class="sidebar-drop-link" href="#">Game three</a></li>
+            </ul>
+        </li>
+        <li class="sidebar-item sidebar-item-name">
+            <a class="sidebar-drop-link" href="#dropMenu3" data-bs-toggle="collapse">
+                <i class="fal fa-tools fa-lg p-2"></i>
+                <div class="text-uppercase">
+                    My tools
+                </div>
+            </a>
+            <ul class="collapse list-unstyled " id="dropMenu3">
+                <li><a class="sidebar-drop-link" href="#">Tool one</a></li>
+                <li><a class="sidebar-drop-link" href="#">Tool two</a></li>
+                <li><a class="sidebar-drop-link" href="#">Tool three</a></li>
             </ul>
         </li>
     </ul>
@@ -36,16 +81,16 @@
                     <div class="d-flex align-items-center">
                         <a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900"
                             id="toggle-btn" href="#">
-                            <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
-                                <use xlink:href="#menu-1"></use>
-                            </svg></a><a class="navbar-brand ms-2" href="index.html">
-                            <div class="brand-text d-none d-md-inline-block text-uppercase letter-spacing-0">
+                            <i class="fal fa-bars fa-lg "></i>
+                        </a>
+                        <a class="navbar-brand ms-2" href="index.html">
+                            <div class="brand-text d-none d-md-inline-block text-uppercase ">
                                 <span class="text-white fw-normal text-xs">MY</span>
                                 <strong class="text-primary text-sm">PORTFOLIO</strong>
                             </div>
                         </a>
                     </div>
-                    @if (Route::has('login'))
+                    <!-- @if (Route::has('login'))
                     <div class="d-flex fixed-right p-2">
                         @auth
                         <div style="padding-right: 10px">
@@ -63,10 +108,9 @@
                         @endif
                         @endauth
                     </div>
-                    @endif
+                    @endif -->
                 </div>
             </div>
         </nav>
     </header>
-
 </div>
