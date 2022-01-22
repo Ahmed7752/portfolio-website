@@ -1,7 +1,20 @@
-<!--Bootstrap dependencies -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+ <!-- Latest compiled and minified CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Site main css -->
-<link rel="stylesheet" href="./css/master.css">
+ <!-- Latest compiled JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- FontAwesome CSS -->
+<link href="./FontAwesome/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+
+ <!-- Google fonts - Roboto -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+ <!-- theme stylesheet-->
+ <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+
+ <!-- Main File-->
+ <script src="./js/front.js"></script>
+
+ <!-- Site main css -->
+ <link rel="stylesheet" href="./css/master.css">

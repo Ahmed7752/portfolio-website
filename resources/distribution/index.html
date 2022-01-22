@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google fonts - Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+</head>
+
+<body>
+  <!-- Side Navbar -->
+  <nav class="side-navbar">
+    <!-- Sidebar Header    -->
+    <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3">
+      <!-- User Info-->
+      <div class="sidenav-header-inner text-center"><img class="img-fluid rounded-circle avatar mb-3"
+          src="img/avatar-7.jpg" alt="person">
+        <h2 class="h5 text-white text-uppercase mb-0">Nathan Andrews</h2>
+        <p class="text-sm mb-0 text-muted">Web Developer</p>
+      </div>
+      <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
+        <p class="h1 m-0">BD</p>
+      </a>
+    </div>
+    <!-- Sidebar Navigation Menus--><span
+      class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
+    <ul class="list-unstyled">
+      
+      <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse">
+          <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+            <use xlink:href="#browser-window-1"> </use>
+          </svg>Example dropdown </a>
+        <ul class="collapse list-unstyled " id="exampledropdownDropdown">
+          <li><a class="sidebar-link" href="#">Page</a></li>
+          <li><a class="sidebar-link" href="#">Page</a></li>
+          <li><a class="sidebar-link" href="#">Page</a></li>
+        </ul>
+      </li>
+    </ul> 
+
+  </nav>
+  <div class="page">
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <div class="d-flex align-items-center"><a
+                class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900" id="toggle-btn"
+                href="#">
+                <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
+                  <use xlink:href="#menu-1"> </use>
+                </svg></a><a class="navbar-brand ms-2" href="index.html">
+                <div class="brand-text d-none d-md-inline-block text-uppercase letter-spacing-0"><span
+                    class="text-white fw-normal text-xs">Bootstrap </span><strong
+                    class="text-primary text-sm">Dashboard</strong></div>
+              </a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  </div>
+  <!-- JavaScript files-->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+  <!-- Main File-->
+  <script src="js/front.js"></script>
+  <script>
+    // ------------------------------------------------------- //
+    //   Inject SVG Sprite - 
+    //   see more here 
+    //   https://css-tricks.com/ajaxing-svg-sprite/
+    // ------------------------------------------------------ //
+    function injectSvgSprite(path) {
+
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", path, true);
+      ajax.send();
+      ajax.onload = function (e) {
+        var div = document.createElement("div");
+        div.className = 'd-none';
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    }
+    // this is set to BootstrapTemple website as you cannot 
+    // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+    // while using file:// protocol
+    // pls don't forget to change to your domain :)
+    injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+  </script>
+  <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+
+</html>
