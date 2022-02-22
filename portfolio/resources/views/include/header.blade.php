@@ -7,7 +7,7 @@
             <h2 class="h5 my-name text-white text-uppercase mb-0">Ahmed Mohamed</h2>
             <p class="text-sm mb-0 text-muted">Web Developer</p>
         </div>
-        <a class="brand-small text-center" href="index.html">
+        <a class="brand-small text-center" href="#">
             <p class="h1 m-0">AM</p>
         </a>
     </div>
@@ -72,45 +72,43 @@
         </li>
     </ul>
 </nav>
-<div class="page">
-    <!-- navbar-->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-between w-100">
-                    <div class="d-flex align-items-center">
-                        <a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900"
-                            id="toggle-btn" href="#">
-                            <i class="fal fa-bars fa-lg "></i>
-                        </a>
-                        <a class="navbar-brand ms-2" href="index.html">
-                            <div class="brand-text d-none d-md-inline-block text-uppercase ">
-                                <span class="text-white fw-normal text-xs">MY</span>
-                                <strong class="text-primary text-sm">PORTFOLIO</strong>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- @if (Route::has('login'))
-                    <div class="d-flex fixed-right p-2">
-                        @auth
-                        <div style="padding-right: 10px">
-                            <a class="btn btn-primary" href="{{ url('/home') }}" role="button">Home</a>
+<!-- navbar-->
+<header class="header">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                    <a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900"
+                        id="toggle-btn" href="#">
+                        <i class="fal fa-bars fa-lg "></i>
+                    </a>
+                    <a class="navbar-brand ms-2" href="index.html">
+                        <div class="brand-text d-none d-md-inline-block text-uppercase ">
+                            <span class="text-white fw-normal text-xs">MY</span>
+                            <strong class="text-primary text-sm">PORTFOLIO</strong>
                         </div>
-                        @else
-                        <div style="padding-right: 10px;">
-                            <a class="btn btn-primary" href="{{ route('login') }}" role="button">Login</a>
-                        </div>
-
-                        @if (Route::has('register'))
-                        <div style="padding-left: 10px;">
-                            <a class="btn btn-primary" href="{{ route('register') }}" role="button">Register</a>
-                        </div>
-                        @endif
-                        @endauth
-                    </div>
-                    @endif -->
+                    </a>
                 </div>
+                <!-- @if (Route::has('login'))
+                <div class="d-flex fixed-right p-2">
+                    @auth
+                    <div style="padding-right: 10px">
+                        <a class="btn btn-primary" href="{{ url('/home') }}" role="button">Home</a>
+                    </div>
+                    @else
+                    <div style="padding-right: 10px;">
+                        <a class="btn btn-primary" href="{{ route('login') }}" role="button">Login</a>
+                    </div>
+
+                    @if (Route::has('register'))
+                    <div style="padding-left: 10px;">
+                        <a class="btn btn-primary" href="{{ route('register') }}" role="button">Register</a>
+                    </div>
+                    @endif
+                    @endauth
+                </div>
+                @endif -->
             </div>
-        </nav>
-    </header>
-</div>
+        </div>
+    </nav>
+</header>

@@ -10,8 +10,13 @@
  <!-- Google fonts - Roboto -->
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 
- <!-- Main File-->
+ <!-- Main Js -->
  <script src="./js/front.js"></script>
+ 
+
+ <!-- Animation libraries -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
  <!-- Site main css -->
  <link rel="stylesheet" href="./css/master.css">
